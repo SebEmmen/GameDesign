@@ -2,17 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3rnd4ydco0ak"
-path.s3tc="res://.godot/imported/dungeon_albedo.png-a6b0365284dad7a67b58387d6d81855a.s3tc.ctex"
+uid="uid://d2v1ssaacy77p"
+path.s3tc="res://.godot/imported/skeleton_mage_skeleton_texture.png-c561208c5c042f421c47b317ff15f33e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
+generator_parameters={
+"md5": "661544b1e8ba10b5a0c98b638eae6d0b"
+}
 
 [deps]
 
-source_file="res://3d/models/dungeon_albedo.png"
-dest_files=["res://.godot/imported/dungeon_albedo.png-a6b0365284dad7a67b58387d6d81855a.s3tc.ctex"]
+source_file="res://3d/models/skeleton/skeleton_mage_skeleton_texture.png"
+dest_files=["res://.godot/imported/skeleton_mage_skeleton_texture.png-c561208c5c042f421c47b317ff15f33e.s3tc.ctex"]
 
 [params]
 

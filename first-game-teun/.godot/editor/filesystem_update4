@@ -1,7 +1,3 @@
 res://3d/scenes/main.tscn
-res://3d/models/chest_gold/mat_chest.tres
-res://3d/scenes/chest.tscn
-res://3d/addons/proto_controller/proto_controller.tscn
-res://3d/scenes/barrel.tscn
 res://3d/mesh_lib/dungeon.tres
-res://3d/scenes/MeshLibrary.tscn
+res://3d/mesh_lib/MeshLibrary.tscn
