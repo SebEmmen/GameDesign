@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dccjyp7lw5pue"]
+
+[ext_resource type="PackedScene" uid="uid://dpr32n0yn30ho" path="res://3d/models/building/floor_stone.glb" id="1_a3yln"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_j05od"]
+points = PackedVector3Array(-2, -0.10000001, -2, -2, -0.10000001, 2, -2, 0.049985334, -2, 2, -0.10000001, -2, -2, 0.049985334, 2, 2, -0.10000001, 2, 0, 0.050000012, 0, 2, 0.049985334, -2, 2, 0.049985334, 2)
+
+[node name="StaticBody3D" type="StaticBody3D" unique_id=1928654787]
+
+[node name="floor_stone" parent="." unique_id=642966612 instance=ExtResource("1_a3yln")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1346484631]
+shape = SubResource("ConvexPolygonShape3D_j05od")

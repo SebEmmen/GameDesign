@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://y076jlhgmpbf"]
+
+[ext_resource type="PackedScene" uid="uid://dccjyp7lw5pue" path="res://3d/scenes/floor_stone.tscn" id="1_kwbi3"]
+[ext_resource type="PackedScene" uid="uid://dtv6rulqxp7o6" path="res://3d/scenes/pillar.tscn" id="2_cfy8o"]
+[ext_resource type="PackedScene" uid="uid://bahwd1t0fy3xm" path="res://3d/scenes/wall.tscn" id="3_08guk"]
+[ext_resource type="PackedScene" uid="uid://bc3a15347tghd" path="res://3d/scenes/wall_corner.tscn" id="4_xy5y5"]
+[ext_resource type="PackedScene" uid="uid://dbxec62ekjki5" path="res://3d/scenes/wall_doorway.tscn" id="5_f6ttu"]
+[ext_resource type="PackedScene" uid="uid://dmugmyyjjdh3" path="res://3d/scenes/wall_tsplit.tscn" id="6_rho3j"]
+[ext_resource type="PackedScene" uid="uid://c8pini8a0f7u0" path="res://3d/scenes/ceiling.tscn" id="7_f68c8"]
+
+[node name="DungeonMeshLibrarySource" type="Node3D" unique_id=1868564482]
+
+[node name="floor_stone" parent="." unique_id=1928654787 instance=ExtResource("1_kwbi3")]
+
+[node name="pillar" parent="." unique_id=1545189973 instance=ExtResource("2_cfy8o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3943005, 0, 3.5636215)
+
+[node name="wall" parent="." unique_id=110678060 instance=ExtResource("3_08guk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4978073, 0, 5.596949)
+
+[node name="wall_corner" parent="." unique_id=403105463 instance=ExtResource("4_xy5y5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.411909, 0, 3.0776646)
+
+[node name="wall_doorway" parent="." unique_id=422642694 instance=ExtResource("5_f6ttu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.92943, 0, -2.2423544)
+
+[node name="wall_tsplit" parent="." unique_id=141178081 instance=ExtResource("6_rho3j")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38487887, 0, -7.317182)
+
+[node name="ceiling" parent="." unique_id=1131843372 instance=ExtResource("7_f68c8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8853445, 0, -4.6057696)

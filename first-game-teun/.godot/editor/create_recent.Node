@@ -1,6 +1,10 @@
+GridMap
 CSGCombiner3D
+StaticBody3D
+CollisionShape3D
+CSGCylinder3D
+DirectionalLight3D
 Camera3D
 CSGPolygon3D
 CSGBox3D
-CSGCylinder3D
 MeshInstance3D
