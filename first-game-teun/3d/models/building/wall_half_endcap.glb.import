@@ -46,6 +46,11 @@ _subresources={
 "use_external/fallback_path": "res://3d/models/mat_dungeon.tres",
 "use_external/path": "uid://dau4rn7dg83w6"
 }
+},
+"nodes": {
+"PATH:wall_half_endcap": {
+"generate/physics": true
+}
 }
 }
 gltf/naming_version=2
