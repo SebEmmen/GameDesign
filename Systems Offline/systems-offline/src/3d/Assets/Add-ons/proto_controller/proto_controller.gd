@@ -26,15 +26,18 @@ extends CharacterBody3D
 @export var input_jump : String = "ui_accept"
 @export var input_sprint : String = "sprint"
 @export var input_freefly : String = "freefly"
+@export var input_flip_gravity : String = "flip_gravity"
 
 var mouse_captured : bool = false
 var look_rotation : Vector2
 var move_speed : float = 0.0
 var freeflying : bool = false
+var gravity_direction := 1.0
 
 ## IMPORTANT REFERENCES
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
+
 
 func _ready() -> void:
 	check_input_mappings()
@@ -60,6 +63,12 @@ func _unhandled_input(event: InputEvent) -> void:
 			disable_freefly()
 
 func _physics_process(delta: float) -> void:
+	
+	if Input.is_action_just_pressed(input_flip_gravity):
+		gravity_direction *= -1.0
+		up_direction *= -1.0
+		velocity.y = 0
+	
 	# If freeflying, handle freefly and nothing else
 	if can_freefly and freeflying:
 		var input_dir := Input.get_vector(input_left, input_right, input_forward, input_back)
@@ -71,12 +80,12 @@ func _physics_process(delta: float) -> void:
 	# Apply gravity to velocity
 	if has_gravity:
 		if not is_on_floor():
-			velocity += get_gravity() * delta
+			velocity += get_gravity() * gravity_direction * delta
 
 	# Apply jumping
 	if can_jump:
 		if Input.is_action_just_pressed(input_jump) and is_on_floor():
-			velocity.y = jump_velocity
+			velocity.y = jump_velocity * gravity_direction
 
 	# Modify speed based on sprinting
 	if can_sprint and Input.is_action_pressed(input_sprint):
@@ -159,3 +168,5 @@ func check_input_mappings():
 	if can_freefly and not InputMap.has_action(input_freefly):
 		push_error("Freefly disabled. No InputAction found for input_freefly: " + input_freefly)
 		can_freefly = false
+	if not InputMap.has_action(input_flip_gravity):
+		push_error("No InputAction found for gravity flip: " + input_flip_gravity)

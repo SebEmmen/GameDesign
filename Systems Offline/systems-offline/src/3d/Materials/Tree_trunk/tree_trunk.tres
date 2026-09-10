@@ -1,0 +1,16 @@
+[gd_resource type="ORMMaterial3D" format=3 uid="uid://crihm7aey5rub"]
+
+[ext_resource type="Texture2D" uid="uid://d3djbx1bcvhb2" path="res://src/3d/Materials/Tree_trunk/Bark014_1K-JPG/Bark014_1K-JPG_Color.jpg" id="1_kak7v"]
+[ext_resource type="Texture2D" uid="uid://btmcq64r5rhoi" path="res://src/3d/Materials/Tree_trunk/Bark014_1K-JPG/Bark014_1K-JPG_Roughness.jpg" id="2_v02hd"]
+[ext_resource type="Texture2D" uid="uid://n7rpf2qyqnfv" path="res://src/3d/Materials/Tree_trunk/Bark014_1K-JPG/Bark014_1K-JPG_Displacement.jpg" id="3_0ppdv"]
+[ext_resource type="Texture2D" uid="uid://dblte7rvkrhyc" path="res://src/3d/Materials/Tree_trunk/Bark014_1K-JPG/Bark014_1K-JPG_NormalGL.jpg" id="4_kytlt"]
+
+[resource]
+albedo_texture = ExtResource("1_kak7v")
+normal_enabled = true
+normal_texture = ExtResource("4_kytlt")
+clearcoat_enabled = true
+clearcoat_texture = ExtResource("2_v02hd")
+ao_enabled = true
+heightmap_enabled = true
+heightmap_texture = ExtResource("3_0ppdv")

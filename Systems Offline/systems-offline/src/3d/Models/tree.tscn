@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://b8aopr7vk2hps"]
+
+[ext_resource type="Material" uid="uid://crihm7aey5rub" path="res://src/3d/Materials/Tree_trunk/tree_trunk.tres" id="1_lxx45"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vb2t8"]
+height = 2.7580566
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3q4rn"]
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_eljy4"]
+albedo_color = Color(0.02745098, 0.5686275, 0.007843138, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ybtgd"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_pct3w"]
+points = PackedVector3Array(0.4578707, 0.19807906, 0.01578243, -0.48873997, -0.09168735, -0.04518683, -0.47150937, -0.1370268, -0.090701535, 0.07635914, -0.33327514, 0.36417928, 0.13656896, -0.33242497, -0.3469059, -0.15161654, 0.47198188, -0.060245913, -0.10534735, 0.21193622, 0.43966028, -0.045016855, 0.19809827, -0.4564163, 0.4090765, -0.15116782, 0.2425159, -0.27137637, -0.37776056, 0.18187061, 0.41147974, -0.07598096, -0.27324012, 0.19819722, -0.4561612, -0.04493101, -0.24064063, -0.33167413, -0.2857683, 0.22713655, 0.2567203, 0.36304116, 0.22752243, 0.42360392, -0.13548777, -0.37899047, 0.060702223, 0.31946206, -0.40674683, 0.18104935, -0.22569102, -0.014631338, -0.09176946, 0.49022886, -0.37785473, 0.30279276, 0.121712334, 0.046232317, 0.45601088, 0.19818504, -0.22746402, -0.060786348, -0.44034815, 0.22845526, 0.06072284, -0.43988743, -0.09113759, -0.48924586, -0.045174047, 0.44186506, -0.22821625, -0.044958085, 0.31717873, 0.24121423, -0.30081153, -0.044848714, 0.39473665, -0.30295488, -0.316348, -0.19622163, 0.33255145, 0.19844188, -0.03042933, 0.45723665, 0.061471395, -0.1522456, -0.47130713, 0.36308852, 0.25670764, 0.22707908, 0.15213433, -0.43948856, 0.18237916, -0.21072462, 0.36227608, 0.2722302)
+
+[sub_resource type="ORMMaterial3D" id="ORMMaterial3D_yksu8"]
+transparency = 1
+albedo_color = Color(0.09411765, 0.38039216, 0.09019608, 1)
+
+[node name="Tree" type="Node3D" unique_id=1290860537]
+
+[node name="Trunk" type="StaticBody3D" parent="." unique_id=521503304]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06390357, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Trunk" unique_id=1328488477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4300537, 0)
+shape = SubResource("CylinderShape3D_vb2t8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Trunk" unique_id=720700784]
+transform = Transform3D(1, 0, 0, 0, 1.4166126, 0, 0, 0, 1, 0, 1.4167049, 0)
+material_override = ExtResource("1_lxx45")
+mesh = SubResource("CylinderMesh_3q4rn")
+
+[node name="Leaves" type="Node3D" parent="." unique_id=56059717]
+
+[node name="Leaf" type="StaticBody3D" parent="Leaves" unique_id=1708165202]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.06390357, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leaves/Leaf" unique_id=329426096]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+material_override = SubResource("ORMMaterial3D_eljy4")
+mesh = SubResource("SphereMesh_ybtgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leaves/Leaf" unique_id=2044182515]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+shape = SubResource("ConvexPolygonShape3D_pct3w")
+
+[node name="Leaf2" type="StaticBody3D" parent="Leaves" unique_id=475763193]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.696105, 0.06390357, -1.4406006)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leaves/Leaf2" unique_id=115996409]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+material_override = SubResource("ORMMaterial3D_yksu8")
+mesh = SubResource("SphereMesh_ybtgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leaves/Leaf2" unique_id=60861735]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+shape = SubResource("ConvexPolygonShape3D_pct3w")
+
+[node name="Leaf3" type="StaticBody3D" parent="Leaves" unique_id=2078409004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.38346243, 0.5017264, -1.4406006)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leaves/Leaf3" unique_id=949067790]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+material_override = SubResource("ORMMaterial3D_yksu8")
+mesh = SubResource("SphereMesh_ybtgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leaves/Leaf3" unique_id=1518179903]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+shape = SubResource("ConvexPolygonShape3D_pct3w")
+
+[node name="Leaf4" type="StaticBody3D" parent="Leaves" unique_id=1511519229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.0745531, -0.22406363, -0.5662272)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leaves/Leaf4" unique_id=1852442547]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+material_override = SubResource("ORMMaterial3D_yksu8")
+mesh = SubResource("SphereMesh_ybtgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leaves/Leaf4" unique_id=1704794963]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+shape = SubResource("ConvexPolygonShape3D_pct3w")
+
+[node name="Leaf5" type="StaticBody3D" parent="Leaves" unique_id=1795791073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82833445, -0.22406363, -1.8321617)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leaves/Leaf5" unique_id=1226182369]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+material_override = SubResource("ORMMaterial3D_yksu8")
+mesh = SubResource("SphereMesh_ybtgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leaves/Leaf5" unique_id=1172820945]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+shape = SubResource("ConvexPolygonShape3D_pct3w")
+
+[node name="Leaf6" type="StaticBody3D" parent="Leaves" unique_id=2067789606]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.26649964, 1.6297412, -1.8321617)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leaves/Leaf6" unique_id=698095249]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+material_override = SubResource("ORMMaterial3D_yksu8")
+mesh = SubResource("SphereMesh_ybtgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leaves/Leaf6" unique_id=769842836]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+shape = SubResource("ConvexPolygonShape3D_pct3w")
+
+[node name="Leaf7" type="StaticBody3D" parent="Leaves" unique_id=2106268657]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.7417344, 1.6297412, -0.009403229)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leaves/Leaf7" unique_id=1583193308]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+material_override = SubResource("ORMMaterial3D_yksu8")
+mesh = SubResource("SphereMesh_ybtgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leaves/Leaf7" unique_id=1866212200]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+shape = SubResource("ConvexPolygonShape3D_pct3w")
+
+[node name="Leaf8" type="StaticBody3D" parent="Leaves" unique_id=1831210972]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.7049191, 0.9812584, 0.7063191)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leaves/Leaf8" unique_id=519696753]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+material_overlay = SubResource("ORMMaterial3D_yksu8")
+mesh = SubResource("SphereMesh_ybtgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leaves/Leaf8" unique_id=133376246]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+shape = SubResource("ConvexPolygonShape3D_pct3w")
+
+[node name="Leaf9" type="StaticBody3D" parent="Leaves" unique_id=907640679]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.18927574, 0.9812584, -0.39785266)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Leaves/Leaf9" unique_id=228818342]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+material_override = SubResource("ORMMaterial3D_yksu8")
+mesh = SubResource("SphereMesh_ybtgd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Leaves/Leaf9" unique_id=852640563]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 3.4098089, 0.78968525)
+shape = SubResource("ConvexPolygonShape3D_pct3w")
