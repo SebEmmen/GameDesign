@@ -1,0 +1,2 @@
+Assets Folder
+This is for any add-ons and images we have.
