@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b3wuqplm7lupy"]
 
-[ext_resource type="Script" uid="uid://s6oliolcgukk" path="res://dev/3d/Scenes/door.gd" id="1_rqq6b"]
+[ext_resource type="Script" uid="uid://s6oliolcgukk" path="res://src/3d/Scripts/door.gd" id="1_rqq6b"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_l42ft"]
 
