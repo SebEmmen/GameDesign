@@ -45,9 +45,6 @@ mesh = SubResource("BoxMesh_ojbw0")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=1392956734]
 shape = SubResource("BoxShape3D_882ar")
 
-[node name="Door" parent="." unique_id=212972216 instance=ExtResource("5_t4i55")]
-transform = Transform3D(0.9991126, 0, 0.042119164, 0, 1, 0, -0.042119164, 0, 0.9991126, 1.7646236, 2.812336, 6.153258)
-
 [node name="EntranceRoom" type="Node3D" parent="." unique_id=1201356434]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.6062222)
 
@@ -100,3 +97,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3, 0.5, 10)
 
 [node name="SingleDoorWall" parent="EntranceRoom/BackWallWithDoor" unique_id=908054421 instance=ExtResource("4_yy3xw")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.427, 2.9734488, 10.172982)
+
+[node name="MainRoom" type="Node3D" parent="." unique_id=834545413]
+
+[node name="EntranceWall" type="Node3D" parent="MainRoom" unique_id=409640536]
+
+[node name="Wall" parent="MainRoom/EntranceWall" unique_id=777147752 instance=ExtResource("3_b3d3a")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.905, 0.5, -8.249)
+
+[node name="Wall2" parent="MainRoom/EntranceWall" unique_id=1389057411 instance=ExtResource("3_b3d3a")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.905, 0.5, -13.249)
+
+[node name="Wall3" parent="MainRoom/EntranceWall" unique_id=720345905 instance=ExtResource("3_b3d3a")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.905, 0.5, -18.249)
+
+[node name="Wall4" parent="MainRoom/EntranceWall" unique_id=2074039585 instance=ExtResource("3_b3d3a")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.905, 0.5, 12.342)
+
+[node name="Wall5" parent="MainRoom/EntranceWall" unique_id=1251285737 instance=ExtResource("3_b3d3a")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.905, 0.5, 17.342)
+
+[node name="Wall6" parent="MainRoom/EntranceWall" unique_id=1870354552 instance=ExtResource("3_b3d3a")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 9.905, 0.5, 22.342)
+
+[node name="GridMap" type="GridMap" parent="MainRoom" unique_id=1761111607]
+cell_size = Vector3(2.5, 2, 2.5)
