@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bon0sodvgf0lp"]
+
+[ext_resource type="Script" uid="uid://dhvnkfdaj5yfy" path="res://src/2d/HUD/escape_menu.gd" id="1_i5fl8"]
+[ext_resource type="Script" uid="uid://campr2bdirhr1" path="res://src/2d/HUD/resume_button.gd" id="2_5043q"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=2114750774]
+script = ExtResource("1_i5fl8")
+
+[node name="Control" type="Control" parent="." unique_id=514588652]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control" unique_id=2120958521]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel" unique_id=1908173528]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+
+[node name="ResumeButton" type="Button" parent="Control/Panel/VBoxContainer" unique_id=639790742]
+layout_mode = 2
+text = "Resume"
+script = ExtResource("2_5043q")
+
+[node name="OptionsButton" type="Button" parent="Control/Panel/VBoxContainer" unique_id=1073119402]
+layout_mode = 2
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="Control/Panel/VBoxContainer" unique_id=1871101362]
+layout_mode = 2
+text = "Quit"
