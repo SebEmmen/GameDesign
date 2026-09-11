@@ -14,7 +14,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody3D:position")
+tracks/0/path = NodePath("SlidingDoorBody:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -29,7 +29,7 @@ resource_name = "close"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody3D:position")
+tracks/0/path = NodePath("SlidingDoorBody:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -44,7 +44,7 @@ resource_name = "open"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("StaticBody3D:position")
+tracks/0/path = NodePath("SlidingDoorBody:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -64,15 +64,15 @@ _data = {
 [node name="SlidingDoor" type="Node3D" unique_id=212972216]
 transform = Transform3D(0.9991126, 0, 0.042119164, 0, 1, 0, -0.042119164, 0, 0.9991126, 0, 0, 0)
 
-[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1063624797 node_paths=PackedStringArray("animation_player")]
+[node name="SlidingDoorBody" type="StaticBody3D" parent="." unique_id=1063624797 node_paths=PackedStringArray("animation_player")]
 script = ExtResource("1_l2ed4")
 animation_player = NodePath("../AnimationPlayer")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1913860126]
+[node name="SlidingDoorMesh" type="MeshInstance3D" parent="SlidingDoorBody" unique_id=1913860126]
 material_override = ExtResource("1_pa7bx")
 mesh = SubResource("BoxMesh_r5iys")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1624379772]
+[node name="CollisionSlidingDoor" type="CollisionShape3D" parent="SlidingDoorBody" unique_id=1624379772]
 shape = SubResource("BoxShape3D_vtsjs")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1868141111]
