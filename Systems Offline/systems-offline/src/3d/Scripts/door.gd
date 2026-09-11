@@ -11,8 +11,7 @@ func interact():
 		toggle = !toggle
 		if toggle == false:
 			animation_player.play("close")
-			await get_tree().create_timer(1.0, false).timeout
 		if toggle == true:
 			animation_player.play("open")
-			await get_tree().create_timer(2.0, false).timeout
+		await get_tree().create_timer(1.0, false).timeout
 		interactable = true
