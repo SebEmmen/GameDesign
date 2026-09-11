@@ -107,3 +107,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.427, 2.9734488, 10.172982)
 [node name="Escape-menu" parent="." unique_id=2114750774 instance=ExtResource("7_b3d3a")]
 
 [node name="Options_menu" parent="Escape-menu" unique_id=953478739 instance=ExtResource("6_b3d3a")]
+
+[editable path="Escape-menu"]
+[editable path="Escape-menu/Options_menu"]
