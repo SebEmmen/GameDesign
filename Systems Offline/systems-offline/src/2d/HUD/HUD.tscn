@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ss41tr5ct1ni"]
+
+[node name="HUD" type="CanvasLayer" unique_id=1615179516]
+
+[node name="Crosshair" type="Label" parent="." unique_id=850780786]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InteractionLabel" type="Label" parent="." unique_id=802217403]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 30.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press [E] to interact"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,4 +1,0 @@
-Materials Folder
-This folder is for the materials of different onjects. 
-For naming keep it simple yet to the point. 
-For example grass-dark for a darker grass patch

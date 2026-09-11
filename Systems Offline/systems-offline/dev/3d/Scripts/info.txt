@@ -1,2 +1,0 @@
-Scripts Folder
-Make sure to name the scripts according to what it is for!
