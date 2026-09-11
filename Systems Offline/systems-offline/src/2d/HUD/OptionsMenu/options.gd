@@ -1,11 +1,11 @@
 extends CanvasLayer
 
 @onready var pause_menu: Control = $Control
-@onready var options_menu: Control = $Control
+#@onready var options_menu: Control = $Control
 
 func _ready() -> void:
 	pause_menu.visible = false
-	options_menu.visible = false
+	#options_menu.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
@@ -35,7 +35,7 @@ func _on_back_button_pressed() -> void:
 
 func _on_options_button_pressed() -> void:
 	pause_menu.visible = false
-	options_menu.visible = true
+	#options_menu.visible = true
 	
 	
 	
