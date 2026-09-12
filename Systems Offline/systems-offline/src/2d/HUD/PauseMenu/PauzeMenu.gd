@@ -8,16 +8,16 @@ func _ready() -> void:
 	#options_menu.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
+	if event.is_action_pressed("ui_menu"):
 		toggle_pause()
 
 func toggle_pause() -> void:
-	var paused := not get_tree().paused
+	var pauzed := get_tree().paused
 
-	get_tree().paused = paused
-	pause_menu.visible = paused
+	get_tree().paused = not pauzed
+	pause_menu.visible = not pauzed
 
-	if paused:
+	if not pauzed:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	else:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

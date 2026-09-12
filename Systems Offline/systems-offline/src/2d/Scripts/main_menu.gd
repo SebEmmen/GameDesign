@@ -5,10 +5,10 @@ extends Control
 
 func _on_continue_pressed():
 	# Replace with your save file loading logic or main game scene path
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	get_tree().change_scene_to_file("res://src/3d/Scenes/rooms/Room1.tscn")
 
 func _on_new_game_pressed():
-	# Load a fresh game scene
 	get_tree().change_scene_to_file("res://src/3d/Scenes/rooms/Room1.tscn")
 
 #func _on_options_pressed():
