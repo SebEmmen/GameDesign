@@ -1,10 +1,17 @@
 extends CanvasLayer
 
 @onready var options_menu: Control = $Control
+@onready var pause_menu = $"../Control"
+
 
 func _ready() -> void:
-	options_menu.visible = false
+	options_menu.visible = true
 
-func _on_back_button_pressed() -> void:
+
+func _on_sound_pressed() -> void:
+	print("boop!")
+	
+func _on_back_pressed() -> void:
 	options_menu.visible = false
-	get_parent().get_node("Control").visible = true
+	pause_menu.visible = true
+	#print("Back!")

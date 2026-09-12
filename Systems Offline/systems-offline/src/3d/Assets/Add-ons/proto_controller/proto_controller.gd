@@ -131,13 +131,13 @@ func disable_freefly():
 func capture_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	mouse_captured = true
-	print("Mouse Captured!")
+	#print("Mouse Captured!")
 
 
 func release_mouse():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	mouse_captured = false
-	print("Mouse Visible!")
+	#print("Mouse Visible!")
 
 
 ## Checks if some Input Actions haven't been created.

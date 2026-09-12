@@ -40,6 +40,7 @@ func _on_quit_button_pressed() -> void:
 
 
 func _on_options_button_pressed() -> void:
+	print("Open options")
 	options_menu.visible = true
 	pause_menu.visible = false
 	

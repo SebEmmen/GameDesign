@@ -107,3 +107,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.427, 2.9734488, 10.172982)
 [node name="PauseMenu" parent="." unique_id=2114750774 instance=ExtResource("7_b3d3a")]
 
 [node name="OptionsMenu" parent="PauseMenu" unique_id=953478739 instance=ExtResource("7_yy3xw")]
+
+[connection signal="pressed" from="PauseMenu/OptionsMenu/Control/Panel/VBoxContainer/Sound" to="PauseMenu/OptionsMenu" method="_on_sound_pressed"]
+[connection signal="pressed" from="PauseMenu/OptionsMenu/Control/Panel/VBoxContainer/Back" to="PauseMenu/OptionsMenu" method="_on_back_pressed"]
+
+[editable path="PauseMenu/OptionsMenu"]
