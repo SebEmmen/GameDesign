@@ -6,22 +6,27 @@ extends CanvasLayer
 
 func _ready() -> void:
 	pause_menu.visible = false
+	options_menu.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_menu"):
 		toggle_pause()
 
 func toggle_pause() -> void:
-	print("Hello")
 	var paused := get_tree().paused
 
 	get_tree().paused = not paused
-	pause_menu.visible = not paused
 
 	if not paused:
-		player.capture_mouse()
-	else:
+		# Opening pause menu
+		pause_menu.visible = true
+		options_menu.visible = false
 		player.release_mouse()
+	else:
+		# Returning to game
+		pause_menu.visible = false
+		options_menu.visible = false
+		player.capture_mouse()
 
 
 func _on_resume_button_pressed() -> void:
