@@ -108,9 +108,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.427, 2.9734488, 10.172982)
 
 [node name="HUD" parent="." unique_id=1615179516 instance=ExtResource("6_1v5mr")]
 
-[node name="Inventory" parent="." unique_id=346101594 instance=ExtResource("9_8wb82")]
-script = ExtResource("10_8wb82")
-
 [node name="PauseMenu" parent="." unique_id=2114750774 instance=ExtResource("7_b3d3a")]
 
 [node name="OptionsMenu" parent="PauseMenu" unique_id=953478739 instance=ExtResource("7_yy3xw")]
+
+[node name="Inventory" parent="." unique_id=346101594 instance=ExtResource("9_8wb82")]
+script = ExtResource("10_8wb82")
+
+[editable path="Inventory"]

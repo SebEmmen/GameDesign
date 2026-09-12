@@ -1,6 +1,6 @@
 extends Resource
 
-class_name Inv_item
+class_name InventoryItem
 
 @export var name: String = ""
 @export var texture: Texture2D
