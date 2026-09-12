@@ -36,6 +36,9 @@ var freeflying : bool = false
 @onready var head: Node3D = $Head
 @onready var collider: CollisionShape3D = $Collider
 
+## Inventory
+@export var inv: Inv
+
 func _ready() -> void:
 	check_input_mappings()
 	

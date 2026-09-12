@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="inv_item" format=3 uid="uid://baq1y1kro3wu3"]
+
+[ext_resource type="Script" uid="uid://dfgqmixpcmng" path="res://src/2d/HUD/Inventory/items/inventory_item.gd" id="1_65y0h"]
+[ext_resource type="Texture2D" uid="uid://cm33wn28mivar" path="res://icon.svg" id="2_clbbs"]
+
+[resource]
+script = ExtResource("1_65y0h")
+name = "logo"
+texture = ExtResource("2_clbbs")
+metadata/_custom_type_script = "uid://dfgqmixpcmng"
